@@ -12,7 +12,7 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [88.4716, 22.7486] },
+      "geometry": { "type": "Point", "coordinates": [88.456682, 22.737926] },
       "properties": {
         "title": "Adamas University 🎓",
         "subtitle": "Barasat",
@@ -21,7 +21,7 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [88.3639, 22.5726] },
+      "geometry": { "type": "Point", "coordinates": [88.4721755, 22.7023784] },
       "properties": {
         "title": "Ayush's Home 🏠",
         "subtitle": "Kolkata",
