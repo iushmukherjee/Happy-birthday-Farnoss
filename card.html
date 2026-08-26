@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card 💌</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fce4ec;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card-container {
+      width: 90%;
+      max-width: 420px;
+      background: #ffffff;
+      border: 4px solid #ff3366;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(255, 51, 102, 0.25);
+      overflow: hidden;
+      margin: 20px auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #ff3366, #ff6b8b);
+      color: white;
+      padding: 24px 16px;
+    }
+
+    .card-header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .card-header p {
+      margin: 6px 0 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .card-body {
+      padding: 24px 20px;
+    }
+
+    .memory-content {
+      font-family: 'Caveat', cursive;
+      font-size: 24px;
+      line-height: 1.5;
+      color: #2c2c2c;
+      background-color: #fff8f9;
+      padding: 18px;
+      border-radius: 14px;
+      border-left: 5px solid #ff3366;
+      text-align: left;
+      white-space: pre-line;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 24px;
+      background-color: #ff3366;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .back-btn:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card-header">
+      <h1 id="title">Location Title</h1>
+      <p id="subtitle">Subtitle</p>
+    </div>
+    <div class="card-body">
+      <div class="memory-content" id="memory">Memory text goes here...</div>
+      <a href="index.html" class="back-btn">← Back to Map</a>
+    </div>
+  </div>
+
+  <script>
+    // Extract parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get('title') || "Happy Birthday!";
+    const subtitle = params.get('subtitle') || "";
+    const memory = params.get('memory') || "";
+
+    // Display content inside frame
+    document.getElementById('title').textContent = title;
+    document.getElementById('subtitle').textContent = subtitle;
+    document.getElementById('memory').textContent = memory;
+  </script>
+</body>
+</html>
