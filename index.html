@@ -8,52 +8,10 @@
   <!-- Leaflet Map CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
     * { box-sizing: border-box; }
-    body, html { margin: 0; padding: 0; height: 100%; font-family: 'Poppins', sans-serif; }
+    body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
     #map { width: 100%; height: 100vh; }
-
-    /* Card Frame Styling for Map Popups */
-    .leaflet-popup-content-wrapper {
-      padding: 0;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 3px solid #ff3366;
-      box-shadow: 0 10px 25px rgba(255, 51, 102, 0.3);
-    }
-    .leaflet-popup-content {
-      margin: 0;
-      width: 290px !important;
-    }
-    .popup-header {
-      background: linear-gradient(135deg, #ff3366, #ff6b8b);
-      color: white;
-      padding: 14px;
-      text-align: center;
-    }
-    .popup-header h3 { margin: 0; font-size: 17px; font-weight: 700; }
-    .popup-header p { margin: 2px 0 0 0; font-size: 12px; opacity: 0.9; }
-    
-    .popup-body {
-      padding: 14px;
-      background: #ffffff;
-    }
-    .memory-box {
-      font-family: 'Caveat', cursive;
-      font-size: 20px;
-      line-height: 1.4;
-      color: #2c2c2c;
-      background-color: #fff8f9;
-      padding: 12px 14px;
-      border-radius: 10px;
-      border-left: 4px solid #ff3366;
-      white-space: pre-line;
-    }
   </style>
 </head>
 <body>
@@ -64,32 +22,27 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   
   <script>
-    // Initialize Map centered to show global locations
+    // Initialize map view centered globally
     const map = L.map('map').setView([20.5937, 78.9629], 3);
 
+    // OpenStreetMap Tile Layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    // Fetch locations directly from GeoJSON
-    fetch('./markers.geojson?v=1')
+    // Load locations from markers.geojson
+    fetch('./markers.geojson?v=2')
       .then(res => res.json())
       .then(data => {
         L.geoJSON(data, {
           onEachFeature: (feature, layer) => {
             const props = feature.properties;
             
-            const popupContent = `
-              <div class="popup-header">
-                <h3>🎉 Happy Birthday Farnos! 🎉</h3>
-                <p>Let's take you to ${props.title}</p>
-              </div>
-              <div class="popup-body">
-                <div class="memory-box">${props.memory}</div>
-              </div>
-            `;
-
-            layer.bindPopup(popupContent);
+            // Redirect to card.html with parameters on marker tap/click
+            layer.on('click', () => {
+              const url = `card.html?title=${encodeURIComponent(props.title)}&subtitle=${encodeURIComponent(props.subtitle)}&memory=${encodeURIComponent(props.memory)}`;
+              window.location.href = url;
+            });
           }
         }).addTo(map);
       });
