@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.3929806, 22.7665838] },
+      "properties": {
+        "title": "Farnos's Home 🏡",
+        "subtitle": "Barrackpore",
+        "memory": "Welcome to your own home haha! This is where we first met (seems kinda odd but it's true). 6th April 2021, you waited (impatiently) for me to arrive, expecting me to be half the size I actually was. Even though you mistook my height, your kiss only had lateral misalignment haha."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.4716, 22.7486] },
+      "properties": {
+        "title": "Adamas University 🎓",
+        "subtitle": "Barasat",
+        "memory": "This is where we have spent the longest time together hehe. Holding hands during the class, the long walk through the inferno-like environment only to have lunch, the random auto rides to barrackpore. I miss Adamas only because of you."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.3639, 22.5726] },
+      "properties": {
+        "title": "Ayush's Home 🏠",
+        "subtitle": "Kolkata",
+        "memory": "I feel even more at home when you're here hehe. I do feel nervous when my mum and you are gossiping, but again it feels strangely nice at the same time, the thought that you two are getting along already. She really likes you oki. Let's not get into details about the deed in my room huehue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [78.4867, 17.3850] },
+      "properties": {
+        "title": "Hyderabad 🏙️",
+        "subtitle": "Hussain Sagar",
+        "memory": "The first time we stayed together away from our family, and what a time it was! The food, the places, Sunrise 💩.\nIt was like a dream, living together, it felt like we had gotten married already hehe. Still can't forget that evening at Hussain Sagar! Such a relief that you were there, the pictures really dont do justice!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.5946, 12.9716] },
+      "properties": {
+        "title": "Bangalore 🌆",
+        "subtitle": "Karnataka",
+        "memory": "The second time of our staying together away from our family! This had an even stronger feeling that we had gotten married already huehue. We had some really terrible moments there, but at least I had you. Loved the weekends, when we would go out and explore, escaping the corporate horror show that we had throughout the week."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [114.1694, 22.3193] },
+      "properties": {
+        "title": "Hong Kong 🏰",
+        "subtitle": "Disneyland",
+        "memory": "Yet to go. Disneyland awaits, one day with you for sure hehe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [7.4474, 46.9480] },
+      "properties": {
+        "title": "Switzerland 🏔️",
+        "subtitle": "Bern",
+        "memory": "On the Wish List. The snow covered mountains of Bern, for which we have a lot to earn huehue. But one day for sure!"
+      }
+    }
+  ]
+}
